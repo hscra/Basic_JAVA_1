@@ -9,6 +9,15 @@
 
 - to catch a runtime error in advance, applied `Tv` objecte name into `ArrayList` so that compiler will detect the error of code prior to run it.
 
+  ```java
+    ArrayList<Tv> tvList = new ArrayList<Tv>();
+    tvList.add(new Tv());
+    Tv t = tvList.get(0);
+    // TV t = (Tv) tvList.get(0);  not necessaryl to the type casting
+
+## Exception
+- `Exception` is a run-time error. It consists of IOException, ClassNotFoundException, RuntimeException and so on.
+- Inside `RuntimeException`, there are several errors such as `ArithmeticException, ClassCastExceoption,NullPointerException` and so on.
 
 
 ### References
