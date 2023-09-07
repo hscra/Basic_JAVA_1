@@ -30,9 +30,21 @@
   List is the parent of ArrayList and LinkedList
 
 
+- Another features of `Generics` in Java
 
-
-
+   a. Iterator<E>
+    ```java
+    	public interface Iterator<E> {
+    		boolean hasNext();
+    		E next();
+				void remove();
+			...
+    	
+    	Iterator <Student> it = list.itrator() ;
+    	while(it.hasNext()){
+    			Student s = it.next() ;  // (Student)it.next() is not required to transfer the type
+  ```  
+	
 ## Exception
 - `Exception` is a run-time error. It consists of IOException, ClassNotFoundException, RuntimeException and so on.
 - Inside `RuntimeException`, there are several errors such as `ArithmeticException, ClassCastExceoption,NullPointerException` and so on.
