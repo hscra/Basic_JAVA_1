@@ -1,38 +1,41 @@
 # Generics
-- Check the type in compile time
-- Simple example of code
+1. Check the type in compile time <br>
+a. Simple example of code
   
   ```java
     ArrayList<Tv> tvList = new ArrayList<Tv>();
     tvList.add(new Tv());
     tvList.add(new Audio());   // compile error
+  ```
 
-- To catch a runtime error in advance, applied `Tv` objecte name into `ArrayList` so that compiler will detect the error of code prior to run it.
+2. To catch a runtime error in advance, applied `Tv` objecte name into `ArrayList` so that compiler will detect the error of code prior to run it.<br>
 
   ```java
     ArrayList<Tv> tvList = new ArrayList<Tv>();
     tvList.add(new Tv());
     Tv t = tvList.get(0);
     // TV t = (Tv) tvList.get(0);  not necessary to the type casting
+  ```
 
-- The type of reference variable should be equal to its constructor. For example,
+3. The type of reference variable should be equal to its constructor. For example,
 
   ```java
     ArrayList<Tv> list = new ArrayList<Tv>() ;  // OK
     ArrayList<Product> list = new ArrayList<Tv>() ;  // Error
   ```
 
-- Polymorphism of generics
+4. Polymorphism of generics
   ```java
     List<Tv> list = new ArrayList<Tv>() ;
     List<Tv> list = new LinkedList<tv>() ;
   ```
-  List is the parent of ArrayList and LinkedList
+  - List is the parent of ArrayList and LinkedList
 
 
-- Another features of `Generics` in Java
+5. Another features of `Generics` in Java
 
-   a. Iterator<E>
+    a. Iterator<E><pr>
+   
    
 ```java
     public interface Iterator<E> {
@@ -46,25 +49,42 @@
     while(it.hasNext()){
       Student s = it.next() ;  // (Student)it.next() is not required to transfer the type
     }
-  ```  
+```  
 
-  b. `HashMap`
+</pr>
+   b. HashMap
+   
+      HashMap<String, Student> map = new HashMap<String, Student>() ;   // new HashMap<> () is possible.
+    
+  
+   ```java
+      public class HashMap extends AbstractMap {
+        ...
+        public Student get(Object key) { ... }
+        public Student put(String key, Student value) { ... }
+        public Student remove(Object kye) { ... }
+        ...
+      }
+   ```
 
-    HashMap<String, Student> map = new HashMap<String, Student>() ;   // new HashMap<> () is possible.
+> For HashMap <Key, Value> , it applies diferent types in `<>`
+  
 
+- By `extends` , java can assign the type from parent to children types.
+- For example,
 
- ```java
-    public class HashMap extends AbstractMap {
-      ...
-      public Student get(Object key) { ... }
-      public Student put(String key, Student value) { ... }
-      public Student remove(Object kye) { ... }
+  ```java
+    class FruitBox< T extends Fruit > {
+      ArrayList<T> list = new ArrayList<T> () ;
       ...
     }
+
+    FruitBox<Apple> appleBox = new FruitBox<Apple>() ;    // Allowed
+    FruitBox<Toy>  toyBox = new FruitBox<Toy>() ;    // Error
+
+    interface Eatable {}
+    class FruitBox<T extends Eatable> { ... }
   ```
-  > For HashMap <Key, Value> , it applies diferent types in `<>`
-  
-    
 
   
 ## Exception
