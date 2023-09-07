@@ -63,7 +63,7 @@
     }
   ```
   > For HashMap <Key, Value> , it applies diferent types in `<>`
-  > 
+  
     
 
   
