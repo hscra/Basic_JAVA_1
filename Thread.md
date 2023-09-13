@@ -30,4 +30,6 @@ ex. Multi thread
     }
   ```
 
+## Thread priority
 
+- 
