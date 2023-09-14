@@ -47,7 +47,7 @@ ex. Multi thread
       t.setDaemon(true);
       t.start();
 
-    for(int i=`; i<= 10; i++) {
+    for(int i=1 ; i<= 10; i++) {
       try {  Thread.sleep(1000);  }
       catch (InterruptedException e) {}
       System.out.println(i);
@@ -67,3 +67,23 @@ ex. Multi thread
     }
   }
   ```
+
+## sleep()
+- A method to sleep a thread for a while
+- Decalre it by try-catch block
+
+```java
+try {
+  Thread.sleep(2*1000);
+} catch (InterruptedException e){}  // It is necesary to apply checked method
+```
+or
+
+```java
+static void delay(long mills){
+  try {
+    Thread.sleep(mills);
+  } catch(InterruptedException e) {}
+}
+```
+
