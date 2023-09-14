@@ -32,7 +32,7 @@ ex. Multi thread
 
 ## Thread priority
 
-## daemon thread
+## Daemon thread
 - It supports main thread and it will end untill main thread will stop.
 - `setDamon ()` call the method of daemon thread
 - `boolean autoSave` declared as static boolean
