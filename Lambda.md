@@ -22,3 +22,29 @@ MyFunction f = new MyFunction() {
 
 int value = f.max(3,5) ;
 ```
+- functional interface parameters
+
+```java
+
+@FunctinoalInterface
+interface MyFunction {
+  void myMethod();
+}
+
+void aMethod(MyFunction f){
+  f.myMethod();
+}
+
+MyFunction f = () -> System.out.println("myMethod()");
+aMethod(f);
+```
+
+- retrun functional interface
+
+```java
+MyFunction myMethod() {
+  MyFunction f = () -> {} ;
+  return f;
+}
+```
+  
