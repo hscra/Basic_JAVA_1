@@ -56,6 +56,11 @@ MyFunction myMethod() {
 Integer method(String a) {
   return Integer.parseInt(s);
 }
+
+// lambda type
+
+Function <String, Integer> f = Integer::parseInt ;
+
 ```
 
 
