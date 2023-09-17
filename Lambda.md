@@ -48,3 +48,17 @@ MyFunction myMethod() {
 }
 ```
   
+## Method reference 
+
+1. static method reference
+
+```java
+Integer method(String a) {
+  return Integer.parseInt(s);
+}
+```
+
+
+
+   
+2. instance method reference
